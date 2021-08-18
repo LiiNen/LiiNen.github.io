@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 body {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -29,6 +29,9 @@ body {
     width: 100%;
 }
 
+.profile {
+    width: 25%;
+}
 .profile img {
     display: block;
     margin: 10px;
@@ -42,7 +45,7 @@ body {
     position: absolute;
     top: 0px;
     height: 100%;
-    width: 400px;
+    width: 65%;
 }
 
 .detail div {
@@ -68,6 +71,7 @@ body {
 
 div.text {
     font-size: 16px;
+    text-decoration: underline;
 }
 
 .detail div .text {
@@ -78,5 +82,54 @@ div.text {
 }
 
 .email, .github, .blog {
+    cursor: pointer;
+}
+
+.history, .activity {
+    display: block;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+}
+.left {
+    width: 20%;
+    padding: 10px;
+}
+.activity .left .item{
+    text-align: center;
+}
+.right {
+    width: 40%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.history .right .item {
+    text-align: center;
+}
+
+.status {
+    padding: 10px;
+    position: absolute;
+    right: 0px;
+}
+.history .status {
+    left: 75%;
+}
+
+.left .item, .right .item, .status .item {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.status .item {
+    text-align: center;
+}
+.activity .status .item {
+    text-align: center;
+}
+
+.clickable {
+    text-decoration: underline;
     cursor: pointer;
 }

@@ -11,6 +11,13 @@
       </div>
       <div class='detail'>
         <div class='name'>김정훈<div class='eng'>Jeonghoon Kim</div></div>
+        <div>
+          <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=FLUTTER&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=SWIFT&logoColor=white"/>
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JAVASCRIPT&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=PYTHON&logoColor=white"/>
+        </div>
         <div class='phone'>📞 010-9394-1087</div>
         <div class='email'>
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width='16px' height='16px'><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
@@ -28,8 +35,91 @@
     </div>
     
     <div class='vertical-divider'></div>
-   
+    <div class='history'>
+      <div class='left'>
+        <div class='item' style='text-align: center; padding-bottom: 15px;'>날짜 / 기간</div>
+      </div>
+      <div class='right'>
+        <div class='item' style='text-align: center; padding-bottom: 15px;'>소속</div>
+      </div>
+      <div class='status'>
+        <div class='item' style='text-align: center; padding-bottom: 15px;'>상태</div>
+      </div>
+    </div>
+    <div class='vertical-divider'></div>
+    <div class='activity'>
+      <div class='left'>
+        <div class='item' style='text-align: center; padding-bottom: 15px;'>날짜 / 기간</div>
+      </div>
+      <div class='right'>
+        <div class='item' style='text-align: center; padding-bottom: 15px;'>활동 (팀명)</div>
+      </div>
+      <div class='status'>
+        <div class='item' style='text-align: center; padding-bottom: 15px;'>비고 및 관련 링크</div>
+      </div>
+    </div>
+
+    <div class='vertical-divider'></div>
     <script>
+      historyList = [
+        ['2011.03 - 2014.02', '당진중학교', '졸업'],
+        ['2014.03 - 2017.02', '충남과학고등학교', '졸업'],
+        ['2017.03 - 2018.12', '아주대학교 소프트웨어학과', '재학'],
+        ['2019.06 - 2020.12', '국군지휘통신사령부 SW개발병', '만기전역'],
+        ['2020.12 - 2020.02', '에이엄 인턴십', ''],
+        ['2021.03 - ', '아주대학교 소프트웨어학과', '재학 중'],
+        ['2021.04 - ', 'SW마에스트로 12기 연수 과정', '진행 중']
+      ];
+
+      historyList.map((e) => {
+        left_temp = document.createElement('div');
+        left_temp.className = 'item';
+        left_temp.innerHTML = e[0];
+        right_temp = document.createElement('div');
+        right_temp.className = 'item';
+        right_temp.innerHTML = e[1];
+        status_temp = document.createElement('div');
+        status_temp.className = 'item';
+        status_temp.innerHTML = e[2] == '' ? '　' : '(' + e[2] + ')';
+        document.querySelectorAll('.history .left')[0].appendChild(left_temp);
+        document.querySelectorAll('.history .right')[0].appendChild(right_temp);
+        document.querySelectorAll('.history .status')[0].appendChild(status_temp);
+      });
+
+      activityList = [
+        ['2014 여름방학', '카이스트 융합인재 과학연구 프로그램', '빅데이터 (matlab)', ''],
+        ['2018 2학기', '창업동아리 (바이너리)', 'iOS 앱개발 (swift)', 'https://github.com/LiiNen/indilist-iOS'],
+        ['2019.09 - 2019.10', 'nsml naver ai-hackathon speech (very ajou)', 'RNN (python)', ''],
+        ['2019.10.19', 'topcit 제 12회 정기평가', '347점', ''],
+        ['2019.10', '2019 군장병 공개SW 집체교육', 'IoT (Arduino, swift)', 'https://github.com/JinsungGwag/Checkstorage'],
+        ['2019.11.25', '경기지역 대학생 창업 경진대회 (BAFF)', '우수상 (한국발명진흥회장상)', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/invention-Gyeongi.jpg'],
+        ['2019.11.29, 30', '건양대학교 헬스 데이터톤 2019 (very ajou)', 'CNN (python)', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/khd2019.pdf'],
+        ['2020.11.30', 'osam 2020 (우와한 장병들)', '대상 (과학기술정보통신부장관상)', 'https://github.com/osamhack2020/WEB_KookbangFriends_Woowahan'],
+        ['2021.05.22', 'topcit 제 15회 정기평가', '432점', ''],
+        ['2021 2학기', '창업동아리 (보컬리스트)', '앱개발 (Flutter)', '']
+      ];
+
+      activityList.map((e) => {
+        left_temp = document.createElement('div');
+        left_temp.className = 'item';
+        left_temp.innerHTML = e[0];
+        right_temp = document.createElement('div');
+        right_temp.className = 'item';
+        right_temp.innerHTML = e[1];
+        status_temp = document.createElement('div');
+        status_temp.className = 'item';
+        status_temp.innerHTML = e[2] == '' ? '　' : '' + e[2] + '';
+        if(e[3] != '') {
+          status_temp.classList.add('clickable');
+          status_temp.addEventListener('click', function linkClick() {
+            window.open(e[3]);
+          });
+        }
+        document.querySelectorAll('.activity .left')[0].appendChild(left_temp);
+        document.querySelectorAll('.activity .right')[0].appendChild(right_temp);
+        document.querySelectorAll('.activity .status')[0].appendChild(status_temp);
+      });
+
       document.querySelectorAll('.email')[0].addEventListener('click', function mailto(){
         window.open('mailto:kjeonghoon065@gmail.com');
       });
