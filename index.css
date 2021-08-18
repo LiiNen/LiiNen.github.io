@@ -3,17 +3,13 @@ div, img{
   padding: 0;
   margin: 0;
   font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    padding: 0;
-    margin: 0;
-    display: inline-block;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 body {
     margin: 0 auto;
-    width: 780px;
+    width: 800px;
     min-width: 780px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -24,6 +20,8 @@ body {
     width: 100%;
     background-color: lightgrey;
     height: 2px;
+    display: block;
+    margin-top: 24px;
 }
 
 .intro {
@@ -34,6 +32,7 @@ body {
 .profile img {
     display: block;
     margin: 10px;
+    margin-left: 20px;
     padding: 0;
     width: 150px;
     height: 200px;
@@ -50,7 +49,7 @@ body {
 
 .detail div {
     display: block;
-    padding-top: 15px;
+    padding-top: 14px;
     position: relative;
 }
 
@@ -76,6 +75,7 @@ body {
     position: relative;
     display: inline;
     font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 .name .eng {
@@ -105,49 +105,42 @@ div.text {
 
 .history, .activity {
     display: block;
-    padding-top: 10px;
     position: relative;
     width: 100%;
 }
-.left {
-    width: 20%;
-    padding: 10px;
-}
-.left .item{
-    text-align: center;
-}
-.right {
-    width: 40%;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.history .right .item {
-    text-align: center;
-}
-
-.status {
-    padding: 10px;
-    position: absolute;
-    right: 0px;
-}
-.history .status {
-    left: 75%;
-}
-
-.left .item, .right .item, .status .item {
+.item {
     display: block;
-    padding-bottom: 5px;
+    position: relative;
 }
 
-.status .item {
+.left {
+    width: 30%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 30px;
     text-align: center;
 }
-.activity .status .item {
-    text-align: center;
+
+.right {
+    width: 70%;
+    padding-left: 24px;
+    padding-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    line-height: 30px;
+    border-left: 1px solid lightgrey;
 }
 
 .clickable {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.left.head, .right.head {
+    padding: 6px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }

@@ -50,90 +50,85 @@
       </div>
     </div>
     
-    <div class='vertical-divider'></div>
-    <div class='history'>
-      <div class='left'>
-        <div class='item' style='text-align: center; padding-bottom: 15px;'>날짜 / 기간</div>
+    <div class='vertical-divider'></div><div class='history'>
+      <div class='item'>
+        <div class='left head' style='text-align: center; font-weight: bolder; background-color: #ebebeb;'>
+          날짜 / 기간
+        </div><div class='right head' style='text-align: center;font-weight: bolder; background-color: #ebebeb;'>
+          소속
+        </div>
       </div>
-      <div class='right'>
-        <div class='item' style='text-align: center; padding-bottom: 15px;'>소속</div>
-      </div>
-      <div class='status'>
-        <div class='item' style='text-align: center; padding-bottom: 15px;'>상태</div>
+    </div>
+    <div class='vertical-divider'></div><div class='activity'>
+      <div class='item'>
+        <div class='left head' style='text-align: center; font-weight: bolder; background-color: #ebebeb;'>
+          날짜 / 기간
+        </div><div class='right head' style='text-align: center; font-weight: bolder; background-color: #ebebeb;'>
+          활동
+        </div>
       </div>
     </div>
     <div class='vertical-divider'></div>
-    <div class='activity'>
-      <div class='left'>
-        <div class='item' style='text-align: center; padding-bottom: 15px;'>날짜 / 기간</div>
-      </div>
-      <div class='right'>
-        <div class='item' style='text-align: center; padding-bottom: 15px;'>활동 (팀명)</div>
-      </div>
-      <div class='status'>
-        <div class='item' style='text-align: center; padding-bottom: 15px;'>비고 및 관련 링크</div>
-      </div>
-    </div>
 
-    <div class='vertical-divider'></div>
     <script>
       historyList = [
-        ['2011.03 - 2014.02', '당진중학교', '졸업'],
-        ['2014.03 - 2017.02', '충남과학고등학교', '졸업'],
-        ['2017.03 - 2018.12', '아주대학교 소프트웨어학과', '재학'],
-        ['2019.06 - 2020.12', '국군지휘통신사령부 SW개발병', '만기전역'],
-        ['2020.12 - 2020.02', '에이엄 인턴십', ''],
-        ['2021.03 - ', '아주대학교 소프트웨어학과', '재학 중'],
-        ['2021.04 - ', 'SW마에스트로 12기 연수 과정', '진행 중']
+        ['2011.03 - 2014.02', '(졸업) 당진중학교'],
+        ['2014.03 - 2017.02', '(졸업) 충남과학고등학교'],
+        ['2017.03 - 2018.12', '(재학) 아주대학교 소프트웨어학과'],
+        ['2019.06 - 2020.12', '(만기전역) 국군지휘통신사령부 (SW개발병)\nHTML5, Javascript, CSS, C#, Java, JDBC'],
+        ['2020.12 - 2020.02', '에이엄 인턴십 (인공지능 및 데이터 분석 팀)\nPython, Scikit-learn'],
+        ['2021.03 - ', '(재학 중) 아주대학교 소프트웨어학과'],
+        ['2021.04 - ', '(진행 중) SW마에스트로 12기 연수 과정']
       ];
 
       historyList.map((e) => {
+        item_temp = document.createElement('div');
+        item_temp.className = 'item';
+
         left_temp = document.createElement('div');
-        left_temp.className = 'item';
-        left_temp.innerHTML = e[0];
+        left_temp.className = 'left';
+        left_temp.innerText = e[0];
         right_temp = document.createElement('div');
-        right_temp.className = 'item';
-        right_temp.innerHTML = e[1];
-        status_temp = document.createElement('div');
-        status_temp.className = 'item';
-        status_temp.innerHTML = e[2] == '' ? '　' : '(' + e[2] + ')';
-        document.querySelectorAll('.history .left')[0].appendChild(left_temp);
-        document.querySelectorAll('.history .right')[0].appendChild(right_temp);
-        document.querySelectorAll('.history .status')[0].appendChild(status_temp);
+        right_temp.className = 'right';
+        right_temp.innerText = e[1];
+
+        item_temp.appendChild(left_temp);
+        item_temp.appendChild(right_temp);
+        document.querySelectorAll('.history')[0].appendChild(item_temp);
       });
 
       activityList = [
-        ['2014 여름방학', '카이스트 융합인재 과학연구 프로그램', '빅데이터 (matlab)', ''],
-        ['2018 2학기', '창업동아리 (바이너리)', 'iOS 앱개발 (swift)', 'https://github.com/LiiNen/indilist-iOS'],
-        ['2019.09 - 2019.10', 'nsml naver ai-hackathon speech (very ajou)', 'RNN (python)', ''],
-        ['2019.10.19', 'topcit 제 12회 정기평가', '347점', ''],
-        ['2019.10', '2019 군장병 공개SW 집체교육', 'IoT (Arduino, swift)', 'https://github.com/JinsungGwag/Checkstorage'],
-        ['2019.11.25', '경기지역 대학생 창업 경진대회 (BAFF)', '우수상 (한국발명진흥회장상)', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/invention-Gyeongi.jpg'],
-        ['2019.11.29, 30', '건양대학교 헬스 데이터톤 2019 (very ajou)', 'CNN (python)', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/khd2019.pdf'],
-        ['2020.11.30', 'osam 2020 (우와한 장병들)', '대상 (과학기술정보통신부장관상)', 'https://github.com/osamhack2020/WEB_KookbangFriends_Woowahan'],
-        ['2021.05.22', 'topcit 제 15회 정기평가', '432점', ''],
+        ['2014 여름방학', '카이스트 융합인재 과학연구 프로그램\n빅데이터를 활용한 통계적인 접근방법 탐구(matlab)', '빅데이터 (matlab)', ''],
+        ['2018 2학기', '창업동아리 (바이너리)\n iOS 앱 개발 진행 (swift, swiftUI)', '인디리스트 Github repository', 'https://github.com/LiiNen/indilist-iOS'],
+        ['2019.09 - 2019.10', 'nsml naver ai-hackathon speech\n팀 very ajou (RNN 모델 구현)', 'RNN (python)', ''],
+        ['2019.10.19', 'topcit 제 12회 정기평가 347점', '347점', ''],
+        ['2019.10', '2019 군장병 공개SW 집체교육 (IoT 분야, Arduino, swift 등 활용)', '재고를 알려줘 Github repository', 'https://github.com/JinsungGwag/Checkstorage'],
+        ['2019.11.25', '경기지역 대학생 창업 경진대회\n팀 BAFF', '우수상 (한국발명진흥회장상) 수상', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/invention-Gyeongi.jpg'],
+        ['2019.11.29, 30', '건양대학교 헬스 데이터톤 2019\n팀 very ajou (CNN 모델 구현)', '참가 증명서', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/khd2019.pdf'],
+        ['2020.11.30', 'osam 2020\n팀 우와한 장병들\n대상 (과학기술정보통신부장관상) 수상', '국방 프렌즈 Github repository', 'https://github.com/osamhack2020/WEB_KookbangFriends_Woowahan'],
+        ['2021.05.22', 'topcit 제 15회 정기평가 432점', '432점', ''],
+        ['2021.06 - ', 'SW마에스트로 12기 연수 과정\n팀 B2K (크로스 플랫폼 앱 개발 담당, Flutter)', '이건모임 Github respository', 'https://github.com/LiiNen/LiiNen-flutter-source'],
         ['2021 2학기', '창업동아리 (보컬리스트)', '앱개발 (Flutter)', '']
       ];
 
       activityList.map((e) => {
+        item_temp = document.createElement('div');
+        item_temp.className = 'item';
+
         left_temp = document.createElement('div');
-        left_temp.className = 'item';
-        left_temp.innerHTML = e[0];
+        left_temp.className = 'left';
+        left_temp.innerText = e[0];
         right_temp = document.createElement('div');
-        right_temp.className = 'item';
-        right_temp.innerHTML = e[1];
-        status_temp = document.createElement('div');
-        status_temp.className = 'item';
-        status_temp.innerHTML = e[2] == '' ? '　' : '' + e[2] + '';
+        right_temp.className = 'right';
+        right_temp.innerText = e[1];
+
         if(e[3] != '') {
-          status_temp.classList.add('clickable');
-          status_temp.addEventListener('click', function linkClick() {
-            window.open(e[3]);
-          });
+          right_temp.innerHTML = right_temp.innerHTML + '<br/> <a href=' + e[3] + '>' + e[2] + '</a>';
         }
-        document.querySelectorAll('.activity .left')[0].appendChild(left_temp);
-        document.querySelectorAll('.activity .right')[0].appendChild(right_temp);
-        document.querySelectorAll('.activity .status')[0].appendChild(status_temp);
+
+        item_temp.appendChild(left_temp);
+        item_temp.appendChild(right_temp);
+        document.querySelectorAll('.activity')[0].appendChild(item_temp);
       });
 
       document.querySelectorAll('.email')[0].addEventListener('click', function mailto(){
