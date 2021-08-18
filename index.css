@@ -1,6 +1,14 @@
+div, img{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     margin: 0;
+    display: inline-block;
 }
 
 body {
@@ -14,4 +22,61 @@ body {
     width: 100%;
     background-color: lightgrey;
     height: 2px;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+}
+
+.profile img {
+    display: block;
+    margin: 10px;
+    padding: 0;
+    width: 150px;
+    height: 200px;
+}
+
+.detail {
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 400px;
+}
+
+.detail div {
+    display: block;
+    padding-top: 10px;
+    position: relative;
+}
+
+.name {
+    position: relative;
+    display: inline;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.name .eng {
+    position: absolute;
+    bottom: 0px;
+    display: inline;
+    margin-left: 10px;
+    font-size: 18px;
+    color: grey;
+}
+
+div.text {
+    font-size: 16px;
+}
+
+.detail div .text {
+    position: absolute;
+    top: 0px;
+    display: inline;
+    margin-left: 10px;
+}
+
+.email, .github, .blog {
+    cursor: pointer;
 }
