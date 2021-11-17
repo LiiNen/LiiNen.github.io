@@ -37,12 +37,15 @@
           <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"/>
           <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JAVASCRIPT&logoColor=black"/>
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=PYTHON&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=JAVA&logoColor=white"/>
           <img src="https://img.shields.io/badge/MySQL-3776AB?style=flat&logo=MYSQL&logoColor=white"/>
         </div>
         <div>
           <img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=FLUTTER&logoColor=white"/>
           <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=REACT&logoColor=black"/>
           <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=NODE.js&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Express-000000?style=flat&logo=EXPRESS&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=SPRING&logoColor=white"/>
           <img src="https://img.shields.io/badge/Flask-000000?style=flat&logo=FLASK&logoColor=white"/>
           <img src="https://img.shields.io/badge/Scikit learn-F7931E?style=flat&logo=Scikitlearn&logoColor=white"/>
           <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat&logo=AmazonAWS&logoColor=white"/>
@@ -108,7 +111,7 @@
         ['2020.11.30', 'osam 2020\n팀 우와한 장병들\n대상 (과학기술정보통신부장관상) 수상', '국방 프렌즈 Github repository', 'https://github.com/osamhack2020/WEB_KookbangFriends_Woowahan'],
         ['2021.05.22', 'topcit 제 15회 정기평가 432점', '432점', ''],
         ['2021.06 - ', 'SW마에스트로 12기 연수 과정\n팀 B2K (크로스 플랫폼 앱 개발 담당, Flutter)', '이건모임 Github respository', 'https://github.com/LiiNen/LiiNen-flutter-source'],
-        ['2021 2학기', '창업동아리 (보컬리스트)', '앱개발 (Flutter)', '']
+        ['2021 2학기', '창업동아리 (보컬리스트, 팀장 및 프로젝트 매니저)', '앱개발 Github (Flutter)', 'https://github.com/LiiNen/vocalist-app', '백엔드 개발 Github (express, mysql)', 'https://github.com/LiiNen/vocalist-backend']
       ];
 
       activityList.map((e) => {
@@ -121,9 +124,13 @@
         right_temp = document.createElement('div');
         right_temp.className = 'right';
         right_temp.innerText = e[1];
-
+        
         if(e[3] != '') {
           right_temp.innerHTML = right_temp.innerHTML + '<br/> <a href=' + e[3] + '>' + e[2] + '</a>';
+        }
+
+        if(e.length > 4) {
+          right_temp.innerHTML = right_temp.innerHTML + '<br/> <a href=' + e[5] + '>' + e[4] + '</a>';
         }
 
         item_temp.appendChild(left_temp);
