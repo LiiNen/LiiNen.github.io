@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class='vertical-divider'></div>
-
+    
     <script>
       historyList = [
         ['2011.03 - 2014.02', '(졸업) 당진중학교'],
@@ -110,8 +110,9 @@
         ['2019.11.29, 30', '건양대학교 헬스 데이터톤 2019\n팀 very ajou (CNN 모델 구현)', '참가 증명서', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/khd2019.pdf'],
         ['2020.11.30', 'osam 2020\n팀 우와한 장병들\n대상 (과학기술정보통신부장관상) 수상', '국방 프렌즈 Github repository', 'https://github.com/osamhack2020/WEB_KookbangFriends_Woowahan'],
         ['2021.05.22', 'topcit 제 15회 정기평가 432점', '432점', ''],
+        ['2021 1학기', '오픈소스 프로젝트 진행 (인체 골격구조 분석기)\n프로젝트 매니징 및 배포 담당', 'Github repository', 'https://github.com/LiiNen/CV_skeleton_provider', 'pypi package 배포', 'https://pypi.org/project/CV-skeleton-provider/'],
         ['2021.06 - ', 'SW마에스트로 12기 연수 과정\n팀 B2K (크로스 플랫폼 앱 개발 담당, Flutter)', '이건모임 Github respository', 'https://github.com/LiiNen/LiiNen-flutter-source'],
-        ['2021 2학기', '창업동아리 (보컬리스트, 팀장 및 프로젝트 매니저)', '앱개발 Github (Flutter)', 'https://github.com/LiiNen/vocalist-app', '백엔드 개발 Github (express, mysql)', 'https://github.com/LiiNen/vocalist-backend']
+        ['2021 2학기', '창업동아리 (보컬리스트, 팀장 및 프로젝트 매니저)', '데모 Github (Flask, vanillaJS)', 'https://github.com/LiiNen/MusicRecommender_Flask', '앱개발 Github (Flutter)', 'https://github.com/LiiNen/vocalist-app', '백엔드 개발 Github (express, mysql)', 'https://github.com/LiiNen/vocalist-backend']
       ];
 
       activityList.map((e) => {
@@ -124,13 +125,17 @@
         right_temp = document.createElement('div');
         right_temp.className = 'right';
         right_temp.innerText = e[1];
-        
+
         if(e[3] != '') {
           right_temp.innerHTML = right_temp.innerHTML + '<br/> <a href=' + e[3] + '>' + e[2] + '</a>';
         }
 
         if(e.length > 4) {
           right_temp.innerHTML = right_temp.innerHTML + '<br/> <a href=' + e[5] + '>' + e[4] + '</a>';
+        }
+
+        if(e.length > 6) {
+          right_temp.innerHTML = right_temp.innerHTML + '<br/> <a href=' + e[7] + '>' + e[6] + '</a>';
         }
 
         item_temp.appendChild(left_temp);
