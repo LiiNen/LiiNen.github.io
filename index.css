@@ -165,3 +165,16 @@ div.text {
 .award {
     font-weight: bold;
 }
+
+.hyperlink {
+    text-decoration: inherit;
+}
+
+.description {
+    padding-left: 20px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: #7b7b7b;
+}
