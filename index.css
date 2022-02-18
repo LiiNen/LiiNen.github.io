@@ -10,7 +10,7 @@ div, img{
 
 body {
     margin: 0 auto;
-    width: 800px;
+    width: 840px;
     min-width: 780px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -32,28 +32,15 @@ body {
 
 .profile img {
     display: block;
-    margin-top: 24px;
-    margin-bottom: 0px;
-    margin-left: 20px;
-    margin-right: -10px;
+    margin: 10px;
+    margin-left: 40px;
     padding: 0;
-    width: 120px;
-    height: 160px;
-}
-.profile .year {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    margin-left: 20px;
-    margin-right: -10px;
-    padding: 0;
-    width: 120px;
-    height: 30px;
-    text-align: center;
-    font-size: smaller;
-    color: #7b7b7b;
+    width: 150px;
+    height: 200px;
 }
 
 .detail {
+    margin-top: -5px;
     margin-left: 30px;
     padding: 10px;
     position: absolute;
