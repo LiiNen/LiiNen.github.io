@@ -84,6 +84,9 @@
       ];
 
       activityList = [
+        ['ing',
+          ['Opensource Contribution: redis / valkey'],
+          ['github', 'contribution example', 'https://github.com/valkey-io/valkey/pull/118']],
         ['Jun 10th, 2022',
           ['award', '<div class="bold">4th Award</div> from Ajou University at Paran Ajou, Team Vloom', 'https://raw.githubusercontent.com/LiiNen/LiiNen/main/images/github-blog/vloom_4award.jpeg']],
         ['Dec 2nd - 9th, 2021',
@@ -139,14 +142,14 @@
         });
       }
 
-      function createNow(li) {
-        li.map((e) => {
-          item_temp = document.createElement('div');
-          item_temp.innerHTML = e;
-          document.querySelectorAll('.now')[0].appendChild(item_temp);
-        });
-      }
-      createNow(interestList);
+      // function createNow(li) {
+      //   li.map((e) => {
+      //     item_temp = document.createElement('div');
+      //     item_temp.innerHTML = e;
+      //     document.querySelectorAll('.now')[0].appendChild(item_temp);
+      //   });
+      // }
+      // createNow(interestList);
 
       createElements('history', historyList);
       createElements('activity', activityList);
